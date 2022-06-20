@@ -1654,6 +1654,7 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%;
+    gap: 5px;
   }
   .header .hero .block-col {
     background-color: #fff;
