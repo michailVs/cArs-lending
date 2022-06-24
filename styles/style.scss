@@ -1,5 +1,6 @@
 @import '_ns';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
+
 body {
     font-family: 'Poppins', sans-serif;
     color: #FFF;
@@ -43,6 +44,7 @@ body {
     text-transform: uppercase;
     display: flex;
     align-items: center;
+    margin-right: 25%;
     & img {
         margin-bottom: 0;
     }
@@ -51,7 +53,6 @@ body {
 .menu > li > a {
     text-decoration: none;
 }
-
 .navbar__wrap .menu {
     display: flex;
 }
@@ -624,6 +625,9 @@ body {
             color: #000;
             padding-left: 10px;
         }
+    }
+    .logo {
+        margin-right: 0;
     }
     .navbar__wrap .menu {
         display: none;

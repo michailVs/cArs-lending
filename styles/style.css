@@ -117,6 +117,7 @@ body {
   text-transform: uppercase;
   display: flex;
   align-items: center;
+  margin-right: 25%;
 }
 .logo img {
   margin-bottom: 0;
@@ -698,6 +699,10 @@ body {
   .footer .copy {
     color: #000;
     padding-left: 10px;
+  }
+
+  .logo {
+    margin-right: 0;
   }
 
   .navbar__wrap .menu {
