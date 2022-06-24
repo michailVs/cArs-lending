@@ -87,12 +87,13 @@ body {
 }
 
 .navbar {
+  padding-top: 10px;
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
-  height: 75px;
   background-color: rgba(0, 0, 0, 0.959);
+  padding-bottom: 10px;
 }
 
 .navbar__wrap {
