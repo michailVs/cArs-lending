@@ -19,6 +19,7 @@ body {
     top: 0;
     width: 100%;
     height: 75px;
+    background-color: rgba(0, 0, 0, 0.959);
 }
 
 .navbar__wrap {
@@ -106,7 +107,7 @@ body {
     .hero {
         .info {
             &__title {
-                margin-top: 40px;
+                margin-top: 160px;
                 font-weight: 700;
                 font-size: 48px;
                 max-width: 791px;
