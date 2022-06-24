@@ -9,31 +9,39 @@
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <div class="header-row">
-                <div class="header-logo"><img src="images/logo.png" alt=""></div>
-                <nav class="header-nav">
-                    <ul class="header-nav__list">
-                        <li class="header-nav__item">
-                            <a href="#" class="header-nav__link">Main</a>
-                        </li>
-                        <li class="header-nav__item">
-                            <a href="#" class="header-nav__link">Out services</a>
-                        </li>
-                        <li class="header-nav__item">
-                            <a href="#" class="header-nav__link">About</a>
-                        </li>
-                        <li class="header-nav__item">
-                            <a href="#" class="header-nav__link">Contacts</a>
-                        </li>
-                    </ul>
-                </nav>
+        <nav class="navbar">
+            <div class="container">
+            <div class="navbar__wrap">
+                <div class="hamb">
+                <div class="hamb__field" id="hamb">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                </div>
+                <a href="#" class="logo" id="logo"><img src="images/logo.png" alt="Logo"></a>
+                <ul class="menu" id="menu">
+                    <li class="menu__item">
+                        <a data-goto=".hero" href="#" class="menu__link">Main</a>
+                    </li>
+                    <li class="menu__item">
+                        <a data-goto=".services" href="#" class="menu__link">Out services</a>
+                    </li>
+                    <li class="menu__item">
+                        <a data-goto=".about" href="#" class="menu__link">About</a>
+                    </li>
+                    <li class="menu__item">
+                        <a data-goto=".fast" href="#" class="menu__link">Contacts</a>
+                    </li>
+                </ul>
                 <div class="header-lang">
                     <a href="#" class="header-lang__ru">RU</a>
                     <a href="#" class="header-lang__en">EN</a>
                 </div>
             </div>
-        </div>
+            </div>
+        </nav>
+        <div class="popup" id="popup"></div>
         <div class="hero">
             <div class="container">
                 <div class="info">
@@ -125,5 +133,6 @@
             <h3 class="copy">&copy;&nbsp;2021 Auto theme by&nbsp;Frontend Tricks</h3>
         </div>
     </footer>
+    <script src="js/nav.js"></script>
 </body>
 </html>
