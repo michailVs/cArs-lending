@@ -7,14 +7,14 @@ const body = document.body
 hamb.addEventListener('click', hambHandler)
 function hambHandler(e) {
     e.preventDefault()
-    popup.classList.add('open')
-    hamb.classList.add('active')
-    body.classList.add('noscroll')
-    renderPopup()
-}
-
-function renderPopup() {
-    popup.appendChild(menu)
+    popup.classList.toggle('open')
+    hamb.classList.toggle('active')
+    body.classList.toggle('noscroll')
+    if (popup.classList.contains('open')) {
+        popup.appendChild(menu)
+    } else {
+        popup.removeChild(menu)
+    }
 }
 
 
@@ -43,6 +43,23 @@ function renderPopup() {
 //         }
 //     }
 // }
+// const goToFunc = e => {
+//     const goTo = e.target.dataset.goto
+//     if ((goTo === '.hero' || goTo === '.services' || goTo === '.about' || goTo === '.fast') && document.querySelector(goTo)) {
+//         if (hamb.classList.contains('active')) {
+//             body.classList.remove('noscroll')
+//             hamb.classList.remove('active')
+//             popup.classList.remove('open')
+//         }
+//         const gotoBlock = document.querySelector(goTo)
+//         const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - document.querySelector('.navbar').offsetHeight
+//         window.scrollTo({
+//         top: gotoBlockValue,
+//         behavior: 'smooth'
+//         })
+//         e.preventDefault()
+//     }
+// }
 const goToFunc = e => {
     const goTo = e.target.dataset.goto
     if ((goTo === '.hero' || goTo === '.services' || goTo === '.about' || goTo === '.fast') && document.querySelector(goTo)) {
@@ -51,12 +68,11 @@ const goToFunc = e => {
             hamb.classList.remove('active')
             popup.classList.remove('open')
         }
-        const gotoBlock = document.querySelector(goTo)
-        const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - document.querySelector('.navbar').offsetHeight
+        const gotoBlock = document.querySelector(goTo).getBoundingClientRect().top + scrollY - document.querySelector('.navbar').offsetHeight
         window.scrollTo({
-        top: gotoBlockValue,
-        behavior: 'smooth'
-        })
+            top: gotoBlock,
+            behavior: 'smooth'
+            })
         e.preventDefault()
     }
 }
